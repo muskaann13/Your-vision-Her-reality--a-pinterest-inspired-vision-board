@@ -1,0 +1,153 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    height:100%;
+    width:100%;
+    background-color:rgb(255, 209, 220);
+}
+a{
+    text-decoration:none;
+}
+.container{
+    max-width:75vw;
+    margin: 0 auto; /*isse center mei place hojayega container*/
+    padding:2rem 1rem;
+}
+.header_container{
+    margin-bottom: 2.5rem;
+}
+.header_title{
+    margin-bottom: 1.5rem;
+    text-align: center;
+    line-height: 2rem;
+    font-weight: 1000;
+    font-family: Papyrus, fantasy;
+    color:rgb(108, 28, 28);
+    text-shadow: 2px 2px 3px rgb(233, 94, 117);
+}
+.header_title:hover{
+    transform: scale(1.2);
+    transition: all 1s ease 0s;
+}
+.header_description{
+    font-size:0.75rem;
+    max-width:768px;
+    text-align: center;
+    color:rgb(187, 92, 92);
+    margin: 0 auto;
+}
+
+.main_container{
+    display:grid;
+    gap:1.5rem;
+    /* grid-template-columns:repeat(1,1fr); */
+    grid-template-columns: repeat(auto-fit, minmax(200px,300px));
+    justify-content: center;
+}
+
+/* @media (min-width:650px){
+    .main_container{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media (min-width:980px){
+    .main_container{
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+
+@media (min-width:1200px){
+    .main_container{
+        grid-template-columns: repeat(4,1fr);
+    }
+} */
+
+.card_container{
+    display:flex;
+    flex-direction: column;
+    justify-content:space-between;
+    border: 2px solid rgb(193, 177, 177);
+    background-color: white;
+    border-radius:20px;
+}
+.cardImage_container{
+    position:relative;
+    overflow:hidden;
+    height:10rem;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+.cardImage{
+    object-fit:cover;
+    object-position:center;
+    position:absolute;
+    height: 100%;
+    width: 100%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+.title_container{
+    display:flex;
+    flex-direction:column;
+    padding:1.5rem;
+}
+.card_container:hover .cardImage{
+    transform: scale(1.1);
+    transition-duration: 200ms;
+}
+.card_title{
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.5rem;
+    margin-bottom: 0.3rem;
+    color:rgb(108, 28, 28);
+}
+.card_title_anchor:hover .card_title{
+    color:rgb(255,0,127);
+}
+.card_description{
+    color:rgb(187, 92, 92);
+    font-size:0.75rem;
+}
+.card_footer_container{
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+    padding:1.5rem;
+}
+.stylist_container{
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    gap: 0.5rem;
+}
+.icon_container .icon{
+    width:2rem;
+    height:2rem;
+    overflow:hidden;
+    border-radius:50%;
+    border: 1px solid black;
+}
+.stylist_info_container .stylist_name{
+    color:rgb(108, 28, 28);
+    font-weight:700;
+    font-size:0.8rem;
+}
+.stylist_info_container .date{
+    color:rgb(187, 92, 92);
+    font-size:0.6rem;
+}
+.card_tag_container{
+    border:1px solid black;
+    background-color: rgb(255, 209, 220);
+    padding:0.1rem 0.4rem;
+    line-height:1.2rem;
+}
+.tag_name{
+    color:rgb(108, 28, 28);
+    font-weight:700;
+}
